@@ -3,8 +3,9 @@ using System.Collections.Generic;
 
 namespace RentCar
 {
-    public class Tratamento
+    public class Tratamento // Class Controlers
     {
+        // Creating lists
         static private List<Veiculos> listaVeiculos = new List<Veiculos>();
         static private List<Ligeiros> listaVeiculosLig = new List<Ligeiros>();
         static private List<Pesados> listaVeiculosPes = new List<Pesados>();
@@ -12,7 +13,8 @@ namespace RentCar
         static private List<AvioesBarcos> listaVeiculosAviaoBarco = new List<AvioesBarcos>();
 
         private static int contador = 0;
-
+        
+        // Controlling methods to add
         public static void AdicionarNovoVeiculoligeiro()
         {
             Ligeiros novoVeiculolig = new Ligeiros();
@@ -48,7 +50,8 @@ namespace RentCar
             listaVeiculosAviaoBarco.Add(novoVeiculoAvBarc);
             listaVeiculos.Add(novoVeiculoAvBarc);
         }
-
+        
+        // Controlling methods to list
         public static void ListarVeiculo()
         {
             Console.WriteLine("----------------------------------");
@@ -74,7 +77,8 @@ namespace RentCar
                 }
             }
         }
-
+        
+        // controlling methods to research by ID
         public static void PesquisaMatriculas()
         {
             Console.Clear();
@@ -88,10 +92,10 @@ namespace RentCar
                 {
                     listaVeiculos[i].MostrarVeiculos();
                 }
-
             }
         }
-
+        
+        // controlling methods to research by name
         public static void PesquisaNome()
         {
             Console.Clear();
@@ -107,7 +111,8 @@ namespace RentCar
                 }
             }
         }
-
+        
+        // controlling methods to remove
         public static void RemoverVeiculo()
         {
             Console.Clear(); 
