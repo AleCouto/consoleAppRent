@@ -1,14 +1,14 @@
-﻿using System;
-namespace RentCar
+using System;
+namespace RentCar //Class models
 {
-    public class Veiculos
+    public class Veiculos //Base class
     {
         public int id { get; set; }
         public string matricula { get; set; }
         public string nome { get; set; }
         public string marca { get; set; }
 
-        public void AdicionarVeiculos()
+        public void AdicionarVeiculos() //Methods for adding data
         {
            
             Console.Write("Matricula: ");
@@ -19,7 +19,7 @@ namespace RentCar
             marca = Convert.ToString(Console.ReadLine());
         }
 
-        public virtual void MostrarVeiculos()
+        public virtual void MostrarVeiculos() //Methods for displaying data
         {
             Console.WriteLine();
             Console.WriteLine("Matricula............:" + matricula);
@@ -28,12 +28,12 @@ namespace RentCar
         }
     }
 
-    public class Ligeiros : Veiculos
+    public class Ligeiros : Veiculos //Derived class
     {
         public string modelo { get; set; }
         public string estado { get; set; }
 
-        public void AdicionarVeiculosligeiros()
+        public void AdicionarVeiculosligeiros() //Constructor methods
         {
             base.AdicionarVeiculos();
             Console.Write("Modelo: ");
@@ -43,7 +43,7 @@ namespace RentCar
             Console.ReadLine();
         }
 
-        public override void MostrarVeiculos()
+        public override void MostrarVeiculos() //Overriding methods
         {
             base.MostrarVeiculos();
             Console.WriteLine("Modelo...............:" + modelo);
@@ -51,13 +51,13 @@ namespace RentCar
         }
     }
 
-    public class Pesados : Veiculos
+    public class Pesados : Veiculos //Derived class
     {
         public int peso { get; set; }
         public string carga { get; set; }
         public int numeropassageiros { get; set; }    
 
-        public void AdicionarVeiculosPesados()
+        public void AdicionarVeiculosPesados() //Constructor methods
         {
             base.AdicionarVeiculos();
             Console.Write("Peso: ");
@@ -69,7 +69,7 @@ namespace RentCar
             Console.ReadLine();
         }
 
-        public override void MostrarVeiculos()
+        public override void MostrarVeiculos() //Overriding methods
         {
             base.MostrarVeiculos();
             Console.WriteLine("Peso.................:" + peso);
@@ -78,13 +78,13 @@ namespace RentCar
         }
     }
 
-    public class AutoCaravana : Veiculos
+    public class AutoCaravana : Veiculos //Derived class
     {
         public string cbanho { get; set; }
         public string quartos { get; set; }
         public string cozinha { get; set; }
 
-        public void AdicionarAutoCaravana()
+        public void AdicionarAutoCaravana() //Constructor methods
         {
             base.AdicionarVeiculos();
             Console.Write("Tem Casa de Banho?: ");
@@ -96,7 +96,7 @@ namespace RentCar
             Console.ReadLine();
         }
 
-        public override void MostrarVeiculos()
+        public override void MostrarVeiculos() //Overriding methods
         {
             base.MostrarVeiculos();
             Console.WriteLine("Casa de Banho........:" + cbanho);
@@ -105,12 +105,12 @@ namespace RentCar
         }
     }
 
-    public class AvioesBarcos : Veiculos
+    public class AvioesBarcos : Veiculos //Derived class
     {
         public int tamanho { get; set; }
         public int potencia { get; set; }
 
-        public void AdicionarAvioesBarcos()
+        public void AdicionarAvioesBarcos() //Constructor methods
         {
             base.AdicionarVeiculos();
             Console.Write("Tamanho: ");
@@ -119,7 +119,7 @@ namespace RentCar
             potencia = Convert.ToInt32(Console.ReadLine());
             Console.ReadLine();
         }
-        public override void MostrarVeiculos()
+        public override void MostrarVeiculos() //Overriding methods
         {
             base.MostrarVeiculos();
             Console.WriteLine("Tamanho..............:" + tamanho);
