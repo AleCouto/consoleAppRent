@@ -2,7 +2,7 @@
 
 namespace RentCar
 {
-    class Program
+    class Program //user interface through the console application
     {
         public static string opc;
         public static string opc2;
